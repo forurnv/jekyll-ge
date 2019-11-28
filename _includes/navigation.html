@@ -1,0 +1,31 @@
+
+
+<header>
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><img src="{{site.baseurl}}/assets/images/logo.svg" alt="Logo"></div>
+        <ul id="menu">
+        <div id="close" class="close"><img src="{{site.baseurl}}/assets/images/close.svg" alt="close"></div>
+          <li> 
+            {% for item in site.data.navigation %}
+            <a href="{{ item.link }}" {% if item.link == page.url %}class="active"{% endif %}>{{ item.name }}</a>
+            {% endfor %}
+          </li>
+        </ul>
+      <div id="menu-button" class="menu"><img src="{{site.baseurl}}/assets/images/menu.svg" alt="menu-button"></div>
+    </div>
+  </nav>
+</header>
+<script src="{{site.baseurl}}/assets/js/app.js"></script>
+
+
+
+<!-- from mike with giraffeacademy in this very 
+post.html page for sorting through posts -->
+<!-- {% for post in site.posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %} -->
+
+
+
+

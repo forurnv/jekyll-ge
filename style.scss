@@ -1,0 +1,117 @@
+---
+
+---
+
+@import 'jekyll-theme-hacker';
+
+main {
+  margin: 3em;
+  text-align: justify;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HEADER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+header {
+  height: 80px;
+  background: #333;
+  opacity: .5;
+}
+header nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+header .logo {
+  background: url('./assets/logo.svg');
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+}
+/* -------------------------------
+NEW SOFTWARE lol
+------------------------------- */
+header .menu {
+  background: url("./assets/menu.svg");
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  display: none;
+}
+header .close {
+  background: url("./assets/close.svg");
+  margin: 1.5em;
+  width: 35px;
+  height: 35px;
+  background-size: 35px;
+  display: none;
+}
+/* -------------------------------
+NEW SOFTWARE 
+------------------------------- */
+header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+header li {
+  color: white;
+  list-style: none;
+  margin: 0;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+@media all and (max-width: 600px) {
+  header ul {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -150px;
+      width: 150px;
+      height: 70vh;
+      background-color: #333;
+      border-bottom-left-radius: 3em;
+      border-color: black;
+
+      flex-direction: column;
+      justify-content: center;
+
+      transition: transform 1s;
+      transform: translatex(0px);
+  }
+  .menu-open {
+      transform: translateX(-150px);
+  }
+  .menu-close {
+      transform: translateX(0px);
+  }
+  header .menu {
+      display: block;
+  }
+  header .close {
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: 2.2em;
+  }
+  header a {
+      font-size: 1.5em;
+      margin: 1em 0 1em 0;
+      padding: 1em;
+      display: flex;
+      align-self: center;
+  }
+}
+#framingImages {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#form {
+  // I just don't have any more time
+}

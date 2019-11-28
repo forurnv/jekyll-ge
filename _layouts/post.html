@@ -1,0 +1,47 @@
+---
+layout: "wrapper"
+author: "Richard from layout"
+---
+
+
+<!-- nav-bar (loop) for posts (with conditional red ink) -->
+{% for post in site.posts %}
+  <li><a style="{% if page.url == post.url %}color:red{% endif %}" href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+
+
+
+<h1>{{ page.title }}</h1>
+<hr>
+<!-- <h3>{{ page.author }}</h3> -->
+<!-- <hr>
+<h4>{{ layout.author }}</h4>
+<hr> -->
+
+
+{{ content }}
+
+
+<!-- you can access page, layout, and site variables inside your jekyll layouts see jekyll docs for more details -->
+<!-- {% if page.title == "post2" %}
+  This is the second Post
+  {% elsif page.title == "post3" %}
+  this is the third post
+{% elsif page.title == "post4" %}
+  this is the fourth post
+ {% elsif page.title == "post5" %}
+  this is the fifth post
+  {% elsif page.title == "post6" %}
+  this is the sixth post
+{% elsif page.title == "post7" %}
+  this is the seventh post
+ {% elsif page.title == "post8" %}
+  this is the eighth post
+  {% elsif page.title == "post9" %}
+  this is the ninth post
+{% elsif page.title == "post10" %}
+  this is the tenth post
+{% else %}
+  This is another post
+{% endif %} -->
+
